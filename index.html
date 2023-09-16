@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MobFix-Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- -----------Bootstrap-5-Cdn------------>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- ------------Style-Sheet-------------->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- ------Font-Awesome-Cdn--------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- ----------Data-Table-------------------- -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- offcanvas -->
+            <div class="col-md-3 col-lg-2 sidebar d-md-block d-none d-lg-flex justify-content-md-center  ">
+                <div class="">
+                    <div class="sidebar-logo mt-5 ">
+
+                        <img src="./images/MobFix-removebg-preview.png" alt="Logo" width="80%">
+                    </div>
+                    <div class="sidebar-menu mt-3 row justify-content-center">
+                        <!-- Sidebar menu items go here -->
+                        <ul class="ul-dash ">
+                            <li>
+                                <a href="./index.html">
+                                    <div class="d-flex gap-lg-4 gap-2 align-items-center class1 ">
+                                        <img class="" src="./images/dashboard 1.png">
+                                        <h1 class="dash1">Dashboard</h1>
+                                    </div>
+                                </a>
+                            </li>
+                            <!-- li2 -->
+
+                            <li><a href="./Sales.html">
+                                    <div class="d-flex gap-lg-4 gap-2 align-items-center class1 ">
+                                        <img class="" src="./images/group 1 (1).png">
+                                        <h1 class="dash1">Sales</h1>
+                                    </div>
+                                </a>
+                            </li>
+                            <!-- li-3 -->
+
+                            <li><a href="./Repairs.html">
+                                    <div class="d-flex gap-lg-4 gap-2  align-items-center class1 ">
+                                        <img class="" src="./images/office-building 1.png">
+                                        <h1 class="dash1">Repair</h1>
+                                    </div>
+                                </a>
+                            </li>
+                            <!-- li-3 -->
+
+                            <li><a href="./chat.html">
+                                    <div class="d-flex  gap-lg-4 gap-2  align-items-center class1 ">
+                                        <img class="" src="./images/customer-service 1.png">
+                                        <h1 class="dash1">Message</h1>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <div class="shop-dropdown dropdown class1 ">
+                                <button class="btn dropdown-toggle d-flex  gap-lg-4 gap-2  align-items-center p-0" type="button"
+                                    id="shopDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+
+                                    <img class="" src="./images/office-building 1.png">
+                                    <h1 class="dash1">Shops</h1>
+
+                                </button>
+                                <ul class="dropdown-menu shop-effect" aria-labelledby="shopDropdown">
+                                    <li><a class="dropdown-item" href="./Shoplist.html"> Shops List</a></li>
+                                    <li><a class="dropdown-item" href="./Customers.html">Customers</a></li>
+
+                                </ul>
+                            </div>
+
+                            <li><a href="#">
+                                    <div class="d-flex  gap-lg-4 gap-2  align-items-center class1 ">
+                                        <img class="" src="./images/resume 1.png">
+                                        <h1 class="dash1">Reports</h1>
+                                    </div>
+                                </a></li>
+
+                            <li><a href="#">
+
+                                    <div class=" setting-div ">
+                                        <div class="d-flex align-items-center  gap-lg-4 gap-2  set-div">
+                                            <img class="" src="./images/settings 1.png">
+                                            <h1 class="dash1">Settings</h1>
+                                        </div>
+                                    </div>
+                                </a></li>
+
+
+                            <!-- Add more menu items here -->
+                        </ul>
+
+
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+            <div class="col-md-2 sidebar d-flex justify-content-center d-md-none d-block">
+                <div class="offcanvas offcanvas-start sidebar" id="demo">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas"></button>
+                        <div class="sidebar-logo mt-3  d-flex align-items-center gap-3">
+
+                            <img src="./images/MobFix-removebg-preview.png" alt="Logo" style="width: 10rem;">
+
+                        </div>
+
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="sidebar-menu mt-5 row justify-content-center ">
+                            <!-- Sidebar menu items go here -->
+                            <ul class="ul-dash">
+                                <li>
+                                    <a href="./index.html">
+                                        <div class="d-flex gap-4 align-items-center class1 ">
+                                            <img class="" src="./images/dashboard 1.png">
+                                            <h1 class="dash1">Dashboard</h1>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- li2 -->
+
+                                <li><a href="#">
+                                        <div class="d-flex gap-4 align-items-center class1 ">
+                                            <img class="" src="./images/group 1 (1).png">
+                                            <h1 class="dash1">Sales</h1>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- li-3 -->
+
+                                <li><a href="./Repairs.html">
+                                        <div class="d-flex gap-4 align-items-center  class1">
+                                            <img class="" src="./images/office-building 1.png">
+                                            <h1 class="dash1">Repair</h1>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- li-3 -->
+
+                                <li><a href="./chat.html">
+                                        <div class="d-flex gap-4 align-items-center class1 ">
+                                            <img class="" src="./images/customer-service 1.png">
+                                            <h1 class="dash1">Message</h1>
+                                        </div>
+                                    </a>
+                                </li>
+                                <div class="shop-dropdown dropdown class1">
+                                    <button class="btn dropdown-toggle d-flex gap-4 align-items-center p-0 "
+                                        type="button" id="shopDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+
+                                        <img class="" src="./images/office-building 1.png">
+                                        <h1 class="dash1">Shops</h1>
+
+                                    </button>
+                                    <ul class="dropdown-menu shop-effect" aria-labelledby="shopDropdown">
+                                        <li><a class="dropdown-item" href="./Shoplist.html"> Shops List</a></li>
+                                        <li><a class="dropdown-item" href="./Customers.html">Customers</a></li>
+
+
+                                    </ul>
+                                </div>
+
+                                <li><a href="#">
+
+                                        <div class="d-flex align-items-center gap-4 class1 ">
+                                            <img class="" src="./images/resume 1.png">
+                                            <h1 class="dash1">Reports</h1>
+                                        </div>
+                                    </a></li>
+                                <li><a href="#">
+
+                                        <div class="d-flex align-items-center gap-4 creative-div ">
+                                            <img class="" src="./images/settings 1.png">
+                                            <h1 class="dash1">Settings</h1>
+                                        </div>
+                                    </a></li>
+
+                                <!-- Add more menu items here -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="col-md-9 col-lg-10 px-0 py-0 bg_colB">
+                <div class="row  p-0 m-0 ">
+                    <div class="col-12 bg_colA">
+
+                        <div class="wrapper_dash">
+                            <div class="navbar_dash">
+                                <div class="navbar_dash_left d-flex justify-content-between">
+                                    <button class="btn  d-md-none d-block px-0 me-sm-0 me-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+                                        <i class="fa-solid fa-bars"></i>
+                                    </button>
+                                    <div class="search-bar">
+                                        <input type="text" class=" search-input inpusearch" placeholder="Search">
+                                        <a href=""><i class="fas fa-search search-icon"></i></a>
+                                    </div>
+                                </div>
+
+                                <div class="navbar_dash_right">
+                                    <div class="notifications d-none d-md-block">
+                                        <div class="icon_wrap" onclick="toggleNotification('notification1')">
+                                            <img src="./assets/images/conversation 1.png" alt="" width="20px">
+                                        </div>
+
+                                        <div class="notification_dd" id="notification1">
+                                            <ul class="notification_ul">
+                                                <li class="starbucks success">
+                                                    <div class="notify_icon">
+                                                        <span class="icon"></span>
+                                                    </div>
+                                                    <div class="notify_data">
+                                                        <div class="title">
+                                                            Lorem, ipsum dolor.
+                                                        </div>
+                                                        <div class="sub_title">
+                                                            Lorem ipsum dolor sit amet consectetur.
+                                                        </div>
+                                                    </div>
+                                                    <div class="notify_status">
+                                                        <p>Success</p>
+                                                    </div>
+                                                </li>
+                                                <li class="baskin_robbins failed">
+                                                    <div class="notify_icon">
+                                                        <span class="icon"></span>
+                                                    </div>
+                                                    <div class="notify_data">
+                                                        <div class="title">
+                                                            Lorem, ipsum dolor.
+                                                        </div>
+                                                        <div class="sub_title">
+                                                            Lorem ipsum dolor sit amet consectetur.
+                                                        </div>
+                                                    </div>
+                                                    <div class="notify_status">
+                                                        <p>Failed</p>
+                                                    </div>
+                                                </li>
+                                                <li class="mcd success">
+                                                    <div class="notify_icon">
+                                                        <span class="icon"></span>
+                                                    </div>
+                                                    <div class="notify_data">
+                                                        <div class="title">
+                                                            Lorem, ipsum dolor.
+                                                        </div>
+                                                        <div class="sub_title">
+                                                            Lorem ipsum dolor sit amet consectetur.
+                                                        </div>
+                                                    </div>
+                                                    <div class="notify_status">
+                                                        <p>Success</p>
+                                                    </div>
+                                                </li>
+                                                <li class="pizzahut failed">
+                                                    <div class="notify_icon">
+                                                        <span class="icon"></span>
+                                                    </div>
+                                                    <div class="notify_data">
+                                                        <div class="title">
+                                                            Lorem, ipsum dolor.
+                                                        </div>
+                                                        <div class="sub_title">
+                                                            Lorem ipsum dolor sit amet consectetur.
+                                                        </div>
+                                                    </div>
+                                                    <div class="notify_status">
+                                                        <p>Failed</p>
+                                                    </div>
+                                                </li>
+                                                <li class="kfc success">
+                                                    <div class="notify_icon">
+                                                        <span class="icon"></span>
+                                                    </div>
+                                                    <div class="notify_data">
+                                                        <div class="title">
+                                                            Lorem, ipsum dolor.
+                                                        </div>
+                                                        <div class="sub_title">
+                                                            Lorem ipsum dolor sit amet consectetur.
+                                                        </div>
+                                                    </div>
+                                                    <div class="notify_status">
+                                                        <p>Success</p>
+                                                    </div>
+                                                </li>
+                                                <li class="show_all">
+                                                    <p class="link">Show All Activities</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                    <div class="notifications d-none d-md-block">
+                                        <div class="icon_wrap" onclick="toggleNotification('notification2')">
+                                            <img src="./assets/images/notification (1) 1.png" alt="" width="20px">
+                                        </div>
+
+                                        <div class="notification_dd" id="notification2">
+                                            <ul class="notification_ul">
+                                                <li class="starbucks success">
+                                                    <div class="notify_icon">
+                                                        <span class="icon"></span>
+                                                    </div>
+                                                    <div class="notify_data">
+                                                        <div class="title">
+                                                            Lorem, ipsum dolor.
+                                                        </div>
+                                                        <div class="sub_title">
+                                                            Lorem ipsum dolor sit amet consectetur.
+                                                        </div>
+                                                    </div>
+                                                    <div class="notify_status">
+                                                        <p>Success</p>
+                                                    </div>
+                                                </li>
+                                                <li class="baskin_robbins failed">
+                                                    <div class="notify_icon">
+                                                        <span class="icon"></span>
+                                                    </div>
+                                                    <div class="notify_data">
+                                                        <div class="title">
+                                                            Lorem, ipsum dolor.
+                                                        </div>
+                                                        <div class="sub_title">
+                                                            Lorem ipsum dolor sit amet consectetur.
+                                                        </div>
+                                                    </div>
+                                                    <div class="notify_status">
+                                                        <p>Failed</p>
+                                                    </div>
+                                                </li>
+                                                <li class="mcd success">
+                                                    <div class="notify_icon">
+                                                        <span class="icon"></span>
+                                                    </div>
+                                                    <div class="notify_data">
+                                                        <div class="title">
+                                                            Lorem, ipsum dolor.
+                                                        </div>
+                                                        <div class="sub_title">
+                                                            Lorem ipsum dolor sit amet consectetur.
+                                                        </div>
+                                                    </div>
+                                                    <div class="notify_status">
+                                                        <p>Success</p>
+                                                    </div>
+                                                </li>
+                                                <li class="pizzahut failed">
+                                                    <div class="notify_icon">
+                                                        <span class="icon"></span>
+                                                    </div>
+                                                    <div class="notify_data">
+                                                        <div class="title">
+                                                            Lorem, ipsum dolor.
+                                                        </div>
+                                                        <div class="sub_title">
+                                                            Lorem ipsum dolor sit amet consectetur.
+                                                        </div>
+                                                    </div>
+                                                    <div class="notify_status">
+                                                        <p>Failed</p>
+                                                    </div>
+                                                </li>
+                                                <li class="kfc success">
+                                                    <div class="notify_icon">
+                                                        <span class="icon"></span>
+                                                    </div>
+                                                    <div class="notify_data">
+                                                        <div class="title">
+                                                            Lorem, ipsum dolor.
+                                                        </div>
+                                                        <div class="sub_title">
+                                                            Lorem ipsum dolor sit amet consectetur.
+                                                        </div>
+                                                    </div>
+                                                    <div class="notify_status">
+                                                        <p>Success</p>
+                                                    </div>
+                                                </li>
+                                                <li class="show_all">
+                                                    <p class="link">Show All Activities</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="notifications d-none d-md-block">
+                                        <div class="icon_wrap" onclick="toggleNotification('notification2')">
+                                            <img src="./assets/images/exit 1.png" alt="" width="20px">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="popup_dash">
+                                    <div class="shadow"></div>
+                                    <div class="inner_popup_dash">
+                                        <div class="notification_dd">
+                                            <ul class="notification_ul ">
+                                                <li class="title">
+                                                    <p>All Notifications</p>
+                                                    <p class="close"><i class="fas fa-times" aria-hidden="true"></i></p>
+                                                </li>
+                                                <li class="starbucks success">
+                                                    <div class="notify_icon">
+                                                        <span class="icon"></span>
+                                                    </div>
+                                                    <div class="notify_data">
+                                                        <div class="title">
+                                                            Lorem, ipsum dolor.
+                                                        </div>
+                                                        <div class="sub_title">
+                                                            Lorem ipsum dolor sit amet consectetur.
+                                                        </div>
+                                                    </div>
+                                                    <div class="notify_status">
+                                                        <p>Success</p>
+                                                    </div>
+                                                </li>
+                                                <li class="baskin_robbins failed">
+                                                    <div class="notify_icon">
+                                                        <span class="icon"></span>
+                                                    </div>
+                                                    <div class="notify_data">
+                                                        <div class="title">
+                                                            Lorem, ipsum dolor.
+                                                        </div>
+                                                        <div class="sub_title">
+                                                            Lorem ipsum dolor sit amet consectetur.
+                                                        </div>
+                                                    </div>
+                                                    <div class="notify_status">
+                                                        <p>Failed</p>
+                                                    </div>
+                                                </li>
+                                                <li class="mcd success">
+                                                    <div class="notify_icon">
+                                                        <span class="icon"></span>
+                                                    </div>
+                                                    <div class="notify_data">
+                                                        <div class="title">
+                                                            Lorem, ipsum dolor.
+                                                        </div>
+                                                        <div class="sub_title">
+                                                            Lorem ipsum dolor sit amet consectetur.
+                                                        </div>
+                                                    </div>
+                                                    <div class="notify_status">
+                                                        <p>Success</p>
+                                                    </div>
+                                                </li>
+                                                <li class="baskin_robbins failed">
+                                                    <div class="notify_icon">
+                                                        <span class="icon"></span>
+                                                    </div>
+                                                    <div class="notify_data">
+                                                        <div class="title">
+                                                            Lorem, ipsum dolor.
+                                                        </div>
+                                                        <div class="sub_title">
+                                                            Lorem ipsum dolor sit amet consectetur.
+                                                        </div>
+                                                    </div>
+                                                    <div class="notify_status">
+                                                        <p>Failed</p>
+                                                    </div>
+                                                </li>
+                                                <li class="pizzahut failed">
+                                                    <div class="notify_icon">
+                                                        <span class="icon"></span>
+                                                    </div>
+                                                    <div class="notify_data">
+                                                        <div class="title">
+                                                            Lorem, ipsum dolor.
+                                                        </div>
+                                                        <div class="sub_title">
+                                                            Lorem ipsum dolor sit amet consectetur.
+                                                        </div>
+                                                    </div>
+                                                    <div class="notify_status">
+                                                        <p>Failed</p>
+                                                    </div>
+                                                </li>
+                                                <li class="kfc success">
+                                                    <div class="notify_icon">
+                                                        <span class="icon"></span>
+                                                    </div>
+                                                    <div class="notify_data">
+                                                        <div class="title">
+                                                            Lorem, ipsum dolor.
+                                                        </div>
+                                                        <div class="sub_title">
+                                                            Lorem ipsum dolor sit amet consectetur.
+                                                        </div>
+                                                    </div>
+                                                    <div class="notify_status">
+                                                        <p>Success</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+              <div class="main-content p-4">
+                    <p class="Paragraph-txt mb-4">Dashboard</p>
+                    <div class="row  notifygap-3  gap-sm-0 ">
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card mb-4 gcard">
+                                <div class="card-body gt">
+                                    <div class="d-flex justify-content-between">
+                                        <h1 class="card-title1">10</h1>
+                                        <img src="./images/enterprise 1.png" alt="">
+                                    </div>
+                                    <h1 class="card-text1">Shop</h1>
+
+
+                                </div>
+                                <a href="#" class="btn-more-info1 w-100 d-flex gap-1 justify-content-center">More
+                                    Info
+                                    <img src="./images/Frame 263.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card mb-4 vcard">
+                                <div class="card-body gt">
+                                    <div class="d-flex justify-content-between">
+                                        <h1 class="card-title1">200</h1>
+                                        <img src="./images/Total Sales.png" alt="">
+                                    </div>
+                                    <h1 class="card-text1">Sales</h1>
+
+                                </div>
+                                <a href="#" class="btn-more-info1 w-100 d-flex gap-1 justify-content-center">More
+                                    Info
+                                    <img src="./images/Frame 263.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card mb-4 scard">
+                                <div class="card-body gt">
+                                    <div class="d-flex justify-content-between">
+                                        <h1 class="card-title1">100</h1>
+                                        <img src="./images/Car Service.png" alt="" style="width: 50px;">
+                                    </div>
+                                    <h1 class="card-text1">Repair Phones</h1>
+
+                                </div>
+                                <a href="#" class="btn-more-info1 w-100 d-flex gap-1 justify-content-center">More
+                                    Info
+                                    <img src="./images/Frame 263.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card mb-4 dcard">
+                                <div class="card-body gt">
+                                    <div class="d-flex justify-content-between">
+                                        <h1 class="card-title1">250</h1>
+                                        <img src="./images/people 1.png" alt="">
+                                    </div>
+                                    <h1 class="card-text1">Customer</h1>
+
+                                </div>
+                                <a href="#" class="btn-more-info1 w-100 d-flex gap-1 justify-content-center">More
+                                    Info
+                                    <img src="./images/Frame 263.png" alt=""></a>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Cards Section -->
+                    <div class="row ">
+
+                        <!-- Add more cards here -->
+
+                        <!-- Charts Section -->
+                        <div class="col-lg-8  col-12">
+
+
+                            <div class="card h-100 ">
+
+                                <div class="card-body cradreport ">
+                                    <h1 class="card-title-repair ">Repair Reports</h1>
+                                    <canvas id="dashedChart" class="">
+
+                                    </canvas>
+                                    <img src="./images/grl.png" alt="">
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Line Chart for Repair Reports -->
+
+
+
+                        <div class="col-lg-4  col-12 mt-lg-0 mt-md-0 mt-4">
+                            <!-- Bar Chart for Customer Fulfillment -->
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h1 class="card-title-repair">Customer Fulfillment</h1>
+                                    <canvas id="stackedAreaChart" class=""></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+
+                            <div class="table-responsive">
+                                <table id="myTable" class="table ">
+                                    <h1 class="shops pt-4 mx-3">Shops</h1>
+                                    <hr style="margin: 0px;">
+                                    <thead>
+
+                                        <tr>
+                                            <th class="text-head">
+                                                ID
+                                            </th>
+                                            <th class="text-head">
+                                                Company Name
+                                            </th>
+                                            <th class="text-head">
+
+                                                Release Date
+
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>01</td>
+                                            <td>Giant</td>
+                                            <td>02/08/2023</td>
+                                        </tr>
+                                        <tr>
+                                            <td>02</td>
+                                            <td>Cannondale</td>
+                                            <td>02/08/2023</td>
+                                        </tr>
+                                        <tr>
+                                            <td>03</td>
+                                            <td>Bianchi</td>
+                                            <td>02/08/2023</td>
+                                        </tr>
+                                        <tr>
+                                            <td>04</td>
+                                            <td>Trek</td>
+                                            <td>02/08/2023</td>
+                                        </tr>
+                                        <tr>
+                                            <td>05</td>
+                                            <td>Bianchi</td>
+                                            <td>02/08/2023</td>
+                                        </tr>
+                                        <!-- Add more rows as needed -->
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                        </div>
+                        <div class="col-md-6 mt-lg-0   mt-md-0 mt-4">
+                            <div class="table-responsive">
+
+                                <table id="myTable2" class="table">
+                                    <h1 class="sales pt-4 mx-3">Sales</h1>
+                                    <hr style="margin: 0px;">
+                                    <thead>
+
+                                        <tr>
+                                            <th class="text-head">
+                                                ID
+                                            </th>
+                                            <th class="text-head">
+                                                Bicycle
+                                            </th>
+                                            <th class="text-head">
+                                                Delievery Date
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>01</td>
+                                            <td>Silver Stallion</td>
+                                            <td>02/08/2023</td>
+                                        </tr>
+                                        <tr>
+                                            <td>02</td>
+                                            <td>T Rider</td>
+                                            <td>02/08/2023</td>
+                                        </tr>
+                                        <tr>
+                                            <td>03</td>
+                                            <td>Zeus</td>
+                                            <td>02/08/2023</td>
+                                        </tr>
+                                        <tr>
+                                            <td>04</td>
+                                            <td>Pegasus</td>
+                                            <td>02/08/2023</td>
+                                        </tr>
+                                        <tr>
+                                            <td>05</td>
+                                            <td>Silver Stallion</td>
+                                            <td>02/08/2023</td>
+                                        </tr>
+                                        <!-- Add more rows as needed -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mt-4 ">
+
+                            <div class="table-responsive">
+                                <table class="table " id="myTable3">
+                                    <h1 class="repair pt-4 mx-3">Repair Phones</h1>
+                                    <hr style="margin: 0px;">
+                                    <thead>
+
+                                        <tr>
+                                            <th class="text-head">
+
+                                                ID
+                                            </th>
+                                            <th class="text-head">
+
+                                                Day of under maint
+
+                                            </th>
+                                            <th class="text-head">
+
+                                                End Date
+
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>01</td>
+                                            <td>4 Days</td>
+                                            <td>02/08/2023</td>
+                                        </tr>
+                                        <tr>
+                                            <td>02</td>
+                                            <td>2 Days</td>
+                                            <td>02/08/2023</td>
+                                        </tr>
+                                        <tr>
+                                            <td>03</td>
+                                            <td>1 Days</td>
+                                            <td>02/08/2023</td>
+                                        </tr>
+                                        <tr>
+                                            <td>04</td>
+                                            <td>3 Days</td>
+                                            <td>02/08/2023</td>
+                                        </tr>
+                                        <tr>
+                                            <td>05</td>
+                                            <td>2 Days</td>
+                                            <td>02/08/2023</td>
+                                        </tr>
+                                        <!-- Add more rows as needed -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mt-4 ">
+                            <div class="table-responsive">
+
+                                <table class="table " id="myTable4">
+
+                                    <thead>
+
+
+                                        <tr>
+                                            <h1 class="customer pt-4 mx-3">Customers</h1>
+                                            <hr style="margin: 0px;">
+                                            <th class="text-head">
+                                                ID
+                                            </th>
+                                            <th class="text-head">
+                                                User name
+                                            </th>
+                                            <th class="text-head">
+                                                Reg Date
+                                            </th>
+                                            <th class="text-head">
+                                                End Date
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>01</td>
+                                            <td>James</td>
+                                            <td>02/07/2023</td>
+                                            <td>02/08/2023</td>
+                                        </tr>
+                                        <tr>
+                                            <td>02</td>
+                                            <td>Noah</td>
+                                            <td>02/07/2023</td>
+                                            <td>02/08/2023</td>
+                                        </tr>
+                                        <tr>
+                                            <td>03</td>
+                                            <td>William</td>
+                                            <td>02/07/2023</td>
+                                            <td>02/08/2023</td>
+                                        </tr>
+                                        <tr>
+                                            <td>04</td>
+                                            <td>Oliver</td>
+                                            <td>02/07/2023</td>
+                                            <td>02/08/2023</td>
+                                        </tr>
+                                        <tr>
+                                            <td>05</td>
+                                            <td>James</td>
+                                            <td>02/07/2023</td>
+                                            <td>02/08/2023</td>
+                                        </tr>
+                                        <!-- Add more rows as needed -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Js---Plugins------- -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <!-- Js-link -->
+    <script src="./assets/js/Script.js"></script>
+
+
+</body>
+
+</html>
